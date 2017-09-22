@@ -1,0 +1,19 @@
+
+<div class="container">
+<div class="panel panel-primary">
+   
+
+    <div class="panel-heading">Integer Translator</div> 
+    <div class="panel-body">
+      <h4>Integer Translator</h4>
+	<input #textbox type="text" required>
+	
+	<button (click)="logText(textbox.value)">Convert to Integer</button>
+	<button (click)="textbox.value=''">Clear</button>
+	<div>&nbsp;</div>
+	<p>Integer Value : {{ textbox.value | integerConverter}}</p>
+	</div>
+  </div>
+</div>
+
+	

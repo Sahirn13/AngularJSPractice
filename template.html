@@ -1,0 +1,61 @@
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<div class="container" ng-app='romanTranslator'>
+	<form name="translator" autocomplete="off">
+		<div class="form-group">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Roman Translator</div>
+				<div class="panel-body" ng-controller="convertNumber">
+					<h4>Roman Translator</h4>
+					<input type="text" class="form-control" name="name"
+						 minlength="1" ng-model="input">
+
+					<div class="panel-body">
+						<button type="submit" ng-click="toInt(input)">Convert
+							to Roman</button> 
+						<button type="submit">Clear</button>
+					</div>
+
+					<div>
+						result: <span ng-cloak>{{intResult}}</span>
+					</div>
+
+
+
+					<!--
+					<div *ngIf="isSelected('LowerCase')">
+						<p>Roman Value : {{ textbox.value | romanConverter | lowercase
+							}}</p>
+					</div>
+
+
+					<div *ngIf="isSelected('Uppercase')">
+						<p>Roman Value : {{ textbox.value | romanConverter | uppercase
+							}}</p>
+					</div>
+ 
+					<div class="radio">
+						<label> <input type="radio" name="case" value="LowerCase"
+							(click)="setradio('LowerCase')" [checked]='true' ngModel>
+							LowerCase
+						</label>
+					</div>
+					<div class="radio">
+						<label> <input type="radio" name="case" value="Uppercase"
+							(click)="setradio('Uppercase')" ngModel> Uppercase
+						</label>
+					</div>
+					-->
+				</div>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button> 
+		</div>
+	</form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="convertService.js"></script>
+<script src="controller.js"></script>
+
