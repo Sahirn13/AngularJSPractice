@@ -55,7 +55,71 @@ var converter = function() {
 	};
 	
 	var convertToRoman = function (input) {
-		return "test";
+		var result = '';
+		if(input >= 1000) {
+			var temp = parseInt(input/1000);
+			for(var i = 0; i < temp; i++) {
+				result += 'M';
+				input -= 1000;
+			}
+		}
+		if(input >= 900) {
+			result += 'CM';
+			input -= 900;
+		}
+		if(input >= 500) {
+			result += 'D';
+			input -= 500;
+		}
+		if(input >= 400) {
+			result += 'CD';
+			input -= 400;
+		}
+		if(input >= 100) {
+			var temp = parseInt(input/100);
+			for(var i = 0; i < temp; i++) {
+				result += 'C';
+				input -= 100;
+			}
+		}
+		if(input >= 90) {
+			result += 'XC';
+			input -= 90;
+		}
+		if(input >= 50) {
+			result += 'L';
+			input -= 50;
+		}
+		if(input >= 40) {
+			result += 'XL';
+			input -= 40;
+		}
+		if(input >= 10) {
+			var temp = parseInt(input/10);
+			for(var i = 0; i < temp; i++) {
+				result += 'X';
+				input -= 10;
+			}
+		}
+		if(input === 9) {
+			result += 'IX';
+			input -= 9;
+		}
+		if(input >= 5) {
+			result += 'V';
+			input -= 5;
+		}
+		if(input === 4) {
+			result += 'IV';
+			input -= 4;
+		}
+		if(input >= 1) {
+			for(var i = 0; i < input; i++) {
+				result += 'I';
+			}
+		}
+
+		return result;
 	};
 
 	return {

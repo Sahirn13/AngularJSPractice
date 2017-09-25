@@ -8,7 +8,13 @@ var convertNumber = function ($scope, converter) {
 	};
 
 	$scope.toRoman = function(input) {
+		$scope.romanResult = converter.convertToRoman(input);
+	};
 
+	$scope.clear = function () {
+		$scope.input = '';
+		$scope.intResult = '';
+		$scope.romanResult = '';
 	};
 
 };
