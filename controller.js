@@ -19,4 +19,11 @@ var convertNumber = function ($scope, converter) {
 
 };
 
+var writeCheckController = function ($scope, checkWriter) {
+	$scope.toEnglish = function (input) {
+		$scope.englishResult = checkWriter.convertCheck(input);
+	};
+};
+
 app.controller('convertNumber', convertNumber);
+app.controller('checkController', writeCheckController);
